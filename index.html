@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recieptify - Instant Receipt & Invoice Verification Checklist for small businesses.">
+    <title>Recieptify | Invoice Verification</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Recieptify</h1>
+            <p class="tagline">Instant Receipt & Invoice Verification Checklist</p>
+        </header>
+
+        <main>
+            <section class="input-section card">
+                <div class="section-header">
+                    <h2>Raw Text Input</h2>
+                    <button id="loadSampleBtn" class="btn secondary-btn">Load Sample Receipt</button>
+                </div>
+                <textarea id="receiptInput" placeholder="Paste your raw unstructured receipt or invoice text here..."></textarea>
+                <div class="action-row">
+                    <button id="generateBtn" class="btn primary-btn">Generate Checklist</button>
+                </div>
+            </section>
+
+            <section id="outputSection" class="output-section card hidden">
+                <div class="progress-container">
+                    <h2 class="progress-text" id="progressText">0/0 Verified</h2>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="progressBarFill"></div>
+                    </div>
+                </div>
+                
+                <div id="checklistContainer" class="checklist-container">
+                    <!-- Dynamically populated checklist items will go here -->
+                </div>
+                
+                <div class="action-row output-actions">
+                    <button id="copyBtn" class="btn secondary-btn">Copy Checklist</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
